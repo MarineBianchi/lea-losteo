@@ -1,0 +1,14 @@
+/* animations.css */
+@keyframes slide-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.animate-slide-left {
+    animation: slide-left 0.5s forwards;
+    /* Vous pouvez ajuster la durée et les propriétés de l'animation selon vos besoins */
+}

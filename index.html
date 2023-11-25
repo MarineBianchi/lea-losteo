@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-    <!-- <link rel="stylesheet" href="./styles.css"> -->
+    <link rel="stylesheet" href="./styles.css">
     <link href="/dist/output.css" rel="stylesheet" />
 
 
@@ -119,12 +119,12 @@
                     <br class="hidden lg:inline-block">Léa l’Ostéo de Craon
                 </h1>
 
-                <div class="flex justify-center">
+                <div class="flex justify-center pt-3">
                     <button
-                        class="inline-flex text-white bg-jaune border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Prendre
+                        class="inline-flex text-white bg-marron border-0 py-2 px-6 focus:outline-none hover:bg-jaune rounded text-base">Prendre
                         rdv en ligne</button>
                 </div>
-                <h3 class="pt-3">ou par téléphone au 06 26 38 81 61</h3>
+                <h3 class="pt-2">ou par téléphone au 06 26 38 81 61</h3>
             </div>
         </div>
     </section>
@@ -132,7 +132,7 @@
     <!-- Réassurance ----------------------------------------------------- -->
 
 
-    <section class="text-gray-600 bg-jaune">
+    <section class="text-gray-900 bg-jaune body-font">
         <div class="container px-5 py-10 mx-auto">
             <div class="flex flex-wrap -m-4 text-center">
                 <div class="p-4 sm:w-1/4 w-1/2">
@@ -181,7 +181,7 @@
 
     <!-- A Propos ------------------------------------------------------->
 
-    <section class="text-gray-600">
+    <section class="text-gray-600 body-font">
         <div class="container mx-auto flex md:flex-row flex-col items-center md:px-20 px-5 py-24">
             <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
                 <img class="object-cover object-center rounded" alt="hero" src="./assets/lea-portrait.png">
@@ -205,12 +205,110 @@
                     patients dans leur parcours de soins.
                 </p>
                 <div class="flex justify-center">
-                    <button
-                        class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
+                    <button id="btn-trait"
+                        class="inline-flex flex-col items-start border-b border-black text-black bg-transparent py-1 px-2 focus:outline-none text-base animate-slide-left">
+
+                        Contactez-moi
+                    </button>
                 </div>
             </div>
         </div>
+
     </section>
+
+
+
+    <!-- Contact ------------------------------------------------------->
+
+
+    <section class="text-gray-900 body-font">
+
+        <div class="container px-5 py-24 mx-auto flex flex-wrap">
+
+            <!-- <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Prendre rendez-vous</h1> -->
+
+            <div class="container px-5 py-24 mx-auto flex flex-wrap items-center">
+
+                <div class="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 mx-auto text-center">
+
+                    <div class="flex flex-col mb-10 lg:items-start mx-auto items-center">
+                        <div
+                            class="w-12 h-12 mx-auto inline-flex items-center justify-center rounded-full bg-jaune text-blanc mb-5">
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" class="w-5 h-5" viewBox="0 0 23 23">
+                                <path
+                                    d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="flex-grow">
+                            <h2 class="text-gray-900 text-lg title-font font-medium mb-3">TEL</h2>
+                            <p class="leading-relaxed text-base"> 06 26 38 81 61 </p>
+
+                        </div>
+                    </div>
+                    <div class="flex flex-col mb-10 lg:items-start mx-auto items-center">
+                        <div
+                            class="w-12 h-12 mx-auto inline-flex items-center justify-center rounded-full bg-jaune text-blanc mb-5">
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+
+                                <path
+                                    d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="flex-grow">
+                            <h2 class="text-gray-900 text-lg title-font font-medium mb-3">MAIL</h2>
+                            <p class="leading-relaxed text-base">leablais.osteo@gmail.com</p>
+
+                        </div>
+                    </div>
+                    <div class="flex flex-col mb-10 lg:items-start mx-auto items-center">
+                        <div
+                            class="w-12 h-12 mx-auto inline-flex items-center justify-center rounded-full bg-jaune text-blanc mb-5">
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+                                <path
+                                    d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="flex-grow">
+                            <h2 class="text-gray-900 text-lg title-font font-medium mb-3">ADRESSE</h2>
+                            <p class="leading-relaxed text-base">62 rue de la Libération 53400 Craon,<br> accès PMR,
+                                parking gratuit</p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div
+                    class="lg:w-2/6 md:w-1/2 bg-gray-100 mx-auto text-center rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0">
+
+                    <h2 class="text-gray-900 text-lg font-medium title-font mt-5 mb-2">Horaires</h2>
+                    <p class="text-normal text-gray-500 mb-5"> 9h - 20h15 <br> du lundi au samedi</p>
+
+                    <div class="relative mb-4">
+                        <h2 class="text-gray-900 text-lg font-medium title-font mb-2">Tarifs</h2>
+                        <p class="text-normal text-gray-500 mb-10">60€ la consultation</p>
+                    </div>
+                    <div class="relative mb-4">
+                        <img class=" mx-auto my-auto w-40" src="/assets/doctolib.png" alt="Rendez-vous doctolib">
+                    </div>
+                    <button
+                        class="text-white bg-marron border-0 py-2 px-8 focus:outline-none hover:bg-jaune rounded text-base mb-5">Prendre
+                        rdv en ligne</button>
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+
+
 
     <!-- Footer ------------------------------------------------------->
 
