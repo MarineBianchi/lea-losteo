@@ -14,6 +14,8 @@ module.exports = {
           'marron': '#E3BBA0',
           'blanc': '#ffffff',
           'jaune': '#FDC77D',
+          'noir': '#000000',
+
         },
         screens: {
           sm: '480px',
@@ -24,12 +26,7 @@ module.exports = {
         fontFamily: {
           sans: ['DM sans', 'sans-serif'],
         },
-        fontSize: {
-          sm: ['14px', '20px'],
-          base: ['16px', '24px'],
-          lg: ['20px', '28px'],
-          xl: ['24px', '32px'],
-        }
+  
       },
     },
     plugins: [],
