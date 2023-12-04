@@ -26,10 +26,10 @@
                 <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
                     <!-- Mobile menu button-->
                     <button type="button"
-                        class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                        class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-900 hover:text-jaune focus:outline-none focus:ring-2 focus:ring-inset"
                         aria-controls="mobile-menu" aria-expanded="false">
                         <span class="absolute -inset-0.5"></span>
-                        <span class="sr-only">Open main menu</span>
+                        <span class="sr-only">Ouvrir le menu principal</span>
                         <!--
                   Icon when menu is closed.
       
@@ -51,24 +51,24 @@
                         </svg>
                     </button>
                 </div>
-                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                    <div class="flex flex-shrink-0 items-center">
-                        <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                            alt="Your Company">
+                <div class="flex flex-1 items-center justify-center sm:items-stretch mt-12">
+                    <div class="lg:hidden flex flex-shrink-0">
+                        <img class="h-17 w-auto" src="./assets/logo-lea-losteo.svg" alt="Léa l'Ostéo">
                     </div>
                     <div class="hidden sm:ml-6 sm:block">
-                        <div class="flex space-x-4">
-                            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                            <a href="#" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
-                                aria-current="page">Pour qui ?</a>
-                            <a href="#"
-                                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Pour
+                        <div class="flex space-x-12 items-center ">
+                            <a href="#" class="text-gray-900 hover:text-marron px-3 py-2 text-" aria-current="page">Pour
+                                qui ?</a>
+                            <a href="#" class="text-gray-900 hover:text-marron px-3 py-2 text-base">Pour
                                 quoi ?</a>
-                            <a href="#"
-                                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">À
+
+                            <div class="flex flex-shrink-0 items-center">
+                                <img class="h-16 w-auto" src="./assets/logo-lea-losteo.svg" alt="Léa l'Ostéo">
+                            </div>
+
+                            <a href="#" class="text-gray-900 hover:text-marron px-3 py-2 text-base">À
                                 propos</a>
-                            <a href="#"
-                                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Rdv
+                            <a href="#" class="text-gray-900 hover:text-marron px-3 py-2 text-base">Rdv
                                 et Contact</a>
                         </div>
                     </div>
@@ -94,22 +94,22 @@
         <div class="sm:hidden" id="mobile-menu">
             <div class="space-y-1 px-2 pb-3 pt-2">
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                <a href="#" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
+                <a href="#" class="bg-jaune text-white block rounded-md px-3 py-2 text-base font-medium"
                     aria-current="page">Pour qui ?</a>
                 <a href="#"
-                    class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Pour
+                    class="bg-marron text-white hover:bg-jaune hover:text-white block rounded-md px-3 py-2 text-base font-medium">Pour
                     quoi ?</a>
                 <a href="#"
-                    class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">À
+                    class="bg-marron text-white hover:bg-jaune hover:text-white block rounded-md px-3 py-2 text-base font-medium">À
                     propos</a>
                 <a href="#"
-                    class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Rdv
+                    class="bg-marron text-white hover:bg-jaune hover:text-white block rounded-md px-3 py-2 text-base font-medium">Rdv
                     et Contact</a>
             </div>
         </div>
     </nav>
 
-    <!-- Header ----------------------------------------------------- -->
+    <!-- Header ------------------------------------------------------->
 
     <section class="text-gray-600 body-font bg-beige lg:px-10">
         <div class="container max-w-7xl mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
@@ -185,19 +185,20 @@
 
     <section class="text-gray-900 bg-beige body-font md:px-20 px-5 py-24">
 
-        <h1 class=" text-3xl lg:text-left pb-10 text-center text-gray-900 mb-8">Pour qui
-            ?</h1>
+        <h2 class=" text-3xl lg:text-left pb-10 text-center text-gray-900 mb-8">Pour qui
+            ?</h2>
+
 
         <div class="flex m-auto p-auto">
 
-            <div class="flex overflow-x-scroll lg:ml-0">
-                <!-- hide-scroll-bar a ajouter au dessus si besoin-->
+            <div class="picturesContainer flex overflow-x-scroll lg:ml-0">
+
 
                 <div class="flex flex-nowrap">
 
-                    <div class="flip-card">
+                    <div class=" flip-card">
 
-                        <div class="flip-card-inner max-w-xs cursor-pointer">
+                        <div class=" flip-card-inner max-w-xs cursor-pointer">
 
                             <div class="flip-card-front flex flex-col items-center justify-center max-w-xs overflow-hidden rounded-lg shadow-md hover:shadow-xl ease-in-out bg-cover bg-center pt-40"
                                 style="background-image: url('./assets/femmes_enceintes.png');">
@@ -296,72 +297,176 @@
                             </button>
                         </div>
                     </div>
-
-                    <div class="inline-block px-3">
-                        <div
-                            class="w-64 h-full max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
-                            <img src="./assets/femmes_enceintes.png" alt="">
-                        </div>
-                    </div>
-
                 </div>
 
-    </section>
-
-
-    <!-- Quand consulter ? --------------------------------------------------------- -->
-
-    <section>
-        <div class="wrapper overflow-x-scroll body-font md:px-20 px-5 py-24 flex justify-center">
-
-            <div class="container flex flex-nowrap justify-start ">
-                <input type="radio" name="slide" id="c1" checked>
-                <label for="c1" class="card">
-                    <div class="row">
-                        <div class="icon">1</div>
-                        <div class="description">
-                            <h4>Winter</h4>
-                            <p>Winter has so much to offer -
-                                creative activities</p>
-                        </div>
-                    </div>
-                </label>
-                <input type="radio" name="slide" id="c2">
-                <label for="c2" class="card">
-                    <div class="row">
-                        <div class="icon">2</div>
-                        <div class="description">
-                            <h4>Digital Technology</h4>
-                            <p>Gets better every day -
-                                stay tuned</p>
-                        </div>
-                    </div>
-                </label>
-                <input type="radio" name="slide" id="c3">
-                <label for="c3" class="card">
-                    <div class="row">
-                        <div class="icon">3</div>
-                        <div class="description">
-                            <h4>Globalization</h4>
-                            <p>Help people all over the world</p>
-                        </div>
-                    </div>
-                </label>
-                <input type="radio" name="slide" id="c4">
-                <label for="c4" class="card">
-                    <div class="row">
-                        <div class="icon">4</div>
-                        <div class="description">
-                            <h4>New technologies</h4>
-                            <p>Space engineering becomes
-                                more and more advanced</p>
-                        </div>
-                    </div>
-                </label>
             </div>
+
+        </div>
+
+        <div class="arrow-buttons">
+            <button id="scroll-left">&lt;</button>
+            <button id="scroll-right">&gt;</button>
         </div>
 
     </section>
+
+
+
+    <!-- Quand consulter ? --------------------------------------- -->
+
+    <section>
+
+        <div class="scroll-container body-font md:px-20 px-5 py-24">
+
+            <h2 class=" text-3xl lg:text-left pb-10 text-center text-gray-900 mb-8">Quand consulter ?</h2>
+
+
+            <div class="card-container">
+                <div class="card" id="card1">
+
+                    <div class="header-content">
+                        <div class="card-header">
+                            <img src="./assets/Dos.svg" alt="Crâne_mâchoire">
+                            <h3 class="uppercase">Crâne &<br> mâchoire</h3>
+                        </div>
+                    </div>
+                    <div class=" card-content">
+                        <p>maux de tête, plagiocéphalie, blocage de la mâchoire, bruxisme</p>
+                    </div>
+                </div>
+
+                <div class="card" id="card2">
+
+                    <div class="header-content">
+                        <div class="card-header">
+                            <img src="./assets/Dos.svg" alt="Crâne_mâchoire">
+                            <h3>CERVICALES</h3>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p>cervicalgie, névralgie cervico-brachiale (NCB), névralgie d’Arnold</p>
+                    </div>
+                </div>
+
+                <div class="card" id="card3">
+
+                    <div class="header-content">
+                        <div class="card-header">
+                            <img src="./assets/Dos.svg" alt="Crâne_mâchoire">
+                            <h3>MEMBRE SUPÉRIEUR</h3>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p>douleur d’épaule (capsulite, tendinite…), douleur du coude ou poignet-main (Tennis Elbow,
+                            canal ulnaire du coude, canal carpien…)</p>
+                    </div>
+                </div>
+
+                <div class="card" id="card4">
+
+                    <div class="header-content">
+                        <div class="card-header">
+                            <img src="./assets/Dos.svg" alt="Crâne_mâchoire">
+                            <h3 class="text-left">DOS &<br>CAGE THORACIQUE</h3>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p>dorsalgie, douleur intercostale, scapulalgie</p>
+                    </div>
+                </div>
+
+                <div class="card" id="card5">
+
+                    <div class="header-content">
+                        <div class="card-header">
+                            <img src="./assets/Dos.svg" alt="Crâne_mâchoire">
+                            <h3>LOMBAIRES</h3>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p>lombalgie, sciatique, cruralgie</p>
+                    </div>
+                </div>
+
+                <div class="card" id="card6">
+
+                    <div class="header-content">
+                        <div class="card-header">
+                            <img src="./assets/Dos.svg" alt="Crâne_mâchoire">
+                            <h3>BASSIN & HANCHE</h3>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p>douleur sacro-iliaque, coxarthrose, tendinopathie</p>
+                    </div>
+                </div>
+
+                <div class="card" id="card7">
+
+                    <div class="header-content">
+                        <div class="card-header">
+                            <img src="./assets/Dos.svg" alt="Crâne_mâchoire">
+                            <h3>MEMBRE INFÉRIEUR </h3>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p>douleur au genou (syndrome rotulien, syndrome de l’essui-glace) , douleur cheville pied
+                            (entorse, syndrome de Morton)</p>
+                    </div>
+                </div>
+
+                <div class="card" id="card8">
+
+                    <div class="header-content">
+                        <div class="card-header">
+                            <img src="./assets/Dos.svg" alt="Crâne_mâchoire">
+                            <h3>SPHÈRE ORL</h3>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p>vertiges, sinusite chronique, canal lacrymal, sommeil</p>
+                    </div>
+                </div>
+
+                <div class="card" id="card9">
+
+                    <div class="header-content">
+                        <div class="card-header">
+                            <img src="./assets/Dos.svg" alt="Crâne_mâchoire">
+                            <h3>SPHÈRE ABDOMINALE</h3>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p>ballonnements, digestion, syndrome du côlon irritable, reflux, constipation chronique</p>
+                    </div>
+                </div>
+
+                <div class="card" id="card10">
+
+                    <div class="header-content">
+                        <div class="card-header">
+                            <img src="./assets/Dos.svg" alt="Crâne_mâchoire">
+                            <h3>SPHÈRE GÉNITALE</h3>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p>douleurs de règles, endométriose, syndrome SOPK</p>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <div class="arrow-buttons">
+                <button id="scroll-left">&lt;</button>
+                <button id="scroll-right">&gt;</button>
+            </div>
+        </div>
+
+
+    </section>
+
 
 
     <!-- A Propos ------------------------------------------------------->
@@ -374,7 +479,7 @@
             <div
                 class="lg:flex-grow md:w-1/2 md:pl-5 flex flex-col md:items-start md:text-left items-center text-center ">
 
-                <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">A propos </h1>
+                <h2 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">A propos </h2>
 
                 <p class="mb-8 leading-relaxed">J’ai reçu une formation initiale de cinq ans à l’école Ostéobio, en
                     région parisienne dont je suis originaire.
@@ -411,7 +516,7 @@
 
     <section class="text-gray-900 body-font md:px-20 px-5 py-24 bg-marron">
 
-        <h1 class="text-3xl lg:text-left text-center text-gray-900 mb-8">Prendre rendez-vous</h1>
+        <h2 class="text-3xl lg:text-left text-center text-gray-900 mb-8">Prendre rendez-vous</h2>
 
         <div class=" container mx-auto flex md:flex-row flex-col items-center md:px-20 px-5 py-24">
 
