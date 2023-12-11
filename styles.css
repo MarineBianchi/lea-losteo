@@ -36,6 +36,58 @@ body {
     overflow-x: hidden;
 }
 
+
+
+/* Grid --------------------------- */
+
+.gridContainer {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    display: grid;
+    position: relative;
+
+}
+
+.photoOseteopahtie {
+    position: absolute;
+    grid-column: 2 / span 5;
+    /* Démarrage à la première colonne, extension sur 5 colonnes */
+    grid-row: 2/ span 5;
+    /* Démarrage à la deuxième ligne, extension sur 1 ligne */
+}
+
+.fondBeige {
+    grid-column: 6 / span 12;
+    grid-row: 3 / span 7;
+    background-color: #F7F1E4;
+    /* padding: 100px; */
+    z-index: -1;
+
+}
+
+.texte {
+    padding: 20px;
+    grid-column: 7 / span 8;
+    grid-row: 4 / span 7;
+    z-index: 1;
+
+}
+
+.fondmarron {
+    grid-column: 1 / span 11;
+    grid-row: 9 / span 12;
+    background-color: #E3BBA0;
+    padding: 70px;
+
+}
+
+.paragrapheHoraires {
+    grid-column: 7 / span 11;
+    grid-row: 10 / span 11;
+}
+
+/* Flip cards pour qui ? ------------------- */
+
 .flip-card {
     width: 260px;
     height: 400px;
@@ -100,6 +152,14 @@ body {
 
 }
 
+#scroll-left2,
+#scroll-right2 {
+    cursor: pointer;
+    padding: 10px;
+    font-size: 40px;
+
+}
+
 .card-container {
     display: flex;
     overflow-x: scroll;
@@ -132,7 +192,7 @@ body {
 .card-header {
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 5px;
     text-align: center;
     justify-content: center;
 }
@@ -146,13 +206,13 @@ body {
 }
 
 .card-header img {
-    width: 40px;
+    width: 50px;
     padding-right: 10px;
 }
 
 .card-content {
     flex-grow: 1;
-    margin-left: 10px;
+    /* margin-left: 10px; */
     display: none;
 }
 

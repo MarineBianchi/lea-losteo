@@ -8,11 +8,9 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
     
-  });
-  
 
-  document.addEventListener('DOMContentLoaded', function () {
-    const cardContainer = document.querySelector('.card-container');
+    const picturesContainer = document.querySelector('.picturesContainer');
+
     const scrollLeftButton = document.getElementById('scroll-left');
     const scrollRightButton = document.getElementById('scroll-right');
   
@@ -23,23 +21,23 @@ document.addEventListener('DOMContentLoaded', function () {
     scrollRightButton.addEventListener('click', function () {
       cardContainer.scrollBy({ left: 200, behavior: 'smooth' });
     });
-  });
 
+    
 
-
-  document.addEventListener('DOMContentLoaded', function () {
-    const picturesContainer = document.querySelector('.picturesContainer');
-    const scrollLeftButton = document.getElementById('scroll-left');
-    const scrollRightButton = document.getElementById('scroll-right');
+   const cardContainer = document.querySelector('.card-container');
   
-    scrollLeftButton.addEventListener('click', function () {
+    const scrollLeftButtonCard = document.getElementById('scroll-left2');
+    const scrollRightButtonCard = document.getElementById('scroll-right2');
+  
+    scrollLeftButtonCard.addEventListener('click', function () {
         picturesContainer.scrollBy({ left: -250, behavior: 'smooth' });
     });
   
-    scrollRightButton.addEventListener('click', function () {
+    scrollRightButtonCard.addEventListener('click', function () {
         picturesContainer.scrollBy({ left: 250, behavior: 'smooth' });
     });
+
+
+
   });
   
-  
-
