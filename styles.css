@@ -187,6 +187,7 @@ body {
     justify-content: center;
     box-shadow: 1px 3px 9px 0px rgba(149, 149, 149, 0.25);
     padding: 20px;
+    background-color: white;
 }
 
 .card-header {
