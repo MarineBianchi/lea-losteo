@@ -10,100 +10,79 @@
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="/dist/output.css" />
 
-    <title>Bienvenue sur le site de Léa l'Ostéo</title>
+    <title>Léa l'Ostéo</title>
 </head>
 
 <body>
-
-
 
     <!-- Menu ----------------------------------------------------- -->
 
 
     <nav class="bg-beige">
-        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-            <div class="relative flex h-16 items-center justify-between">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="relative flex items-center justify-between">
+                <!-- Mobile menu button -->
                 <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                    <!-- Mobile menu button-->
                     <button type="button"
-                        class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-900 hover:text-jaune focus:outline-none focus:ring-2 focus:ring-inset"
-                        aria-controls="mobile-menu" aria-expanded="false">
-                        <span class="absolute -inset-0.5"></span>
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-900 hover:text-jaune focus:outline-none focus:ring-2 focus:ring-inset"
+                        aria-expanded="false" onclick="toggleMenu()">
                         <span class="sr-only">Ouvrir le menu principal</span>
-                        <!--
-                  Icon when menu is closed.
-      
-                  Menu open: "hidden", Menu closed: "block"
-                -->
-                        <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        <svg class="h-6 w-6" id="menu-open-icon" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
-                        <!--
-                  Icon when menu is open.
-      
-                  Menu open: "block", Menu closed: "hidden"
-                -->
-                        <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        <svg class="hidden h-6 w-6" id="menu-close-icon" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
                         </svg>
                     </button>
                 </div>
-                <div class="flex flex-1 items-center justify-center sm:items-stretch mt-12">
-                    <div class="lg:hidden flex flex-shrink-0">
-                        <img class="h-17 w-auto" src="./assets/logo-lea-losteo.svg" alt="Léa l'Ostéo">
-                    </div>
-                    <div class="hidden sm:ml-6 sm:block">
-                        <div class="flex space-x-12 items-center ">
-                            <a href="#" class="text-gray-900 hover:text-marron px-3 py-2 text-" aria-current="page">Pour
-                                qui ?</a>
-                            <a href="#" class="text-gray-900 hover:text-marron px-3 py-2 text-base">Pour
-                                quoi ?</a>
 
-                            <div class="flex flex-shrink-0 items-center">
-                                <img class="h-16 w-auto" src="./assets/logo-lea-losteo.svg" alt="Léa l'Ostéo">
-                            </div>
-
-                            <a href="#" class="text-gray-900 hover:text-marron px-3 py-2 text-base">À
-                                propos</a>
-                            <a href="#" class="text-gray-900 hover:text-marron px-3 py-2 text-base">Rdv
-                                et Contact</a>
-                        </div>
+                <!-- Logo (shown on mobile and larger screens) -->
+                <div
+                    class="flex-1 flex items-center justify-center md:justify-center md:mt-10 sm:items-stretch sm:justify-start mt-7">
+                    <div class="flex-shrink-0 flex">
+                        <img class="block md:hidden h-16 w-auto" src="/assets/logo-lea-losteo.svg" alt="Logo">
                     </div>
-                </div>
-                <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                    <!--
-                  Dropdown menu, show/hide based on menu state.
-      
-                  Entering: "transition ease-out duration-100"
-                    From: "transform opacity-0 scale-95"
-                    To: "transform opacity-100 scale-100"
-                  Leaving: "transition ease-in duration-75"
-                    From: "transform opacity-100 scale-100"
-                    To: "transform opacity-0 scale-95"
-                -->
+                    <div class="hidden sm:flex space-x-10 items-center">
+
+                        <!-- Primary navigation links -->
+                        <a href="#"
+                            class="text-gray-900 hover:text-marron px-3 py-2 rounded-md text-base font-medium">Pour
+                            qui ?</a>
+                        <a href="#"
+                            class="text-gray-900 hover:text-marron px-3 py-2 rounded-md text-base font-medium">Pour
+                            quoi ?</a>
+
+                        <img class="hidden md:block h-16 w-auto md:h-20" src="/assets/logo-lea-losteo.svg" alt="Logo">
+
+                        <a href="#" class="text-gray-900 hover:text-marron px-3 py-2 rounded-md text-base font-medium">À
+                            propos</a>
+                        <a href="#"
+                            class="text-gray-900 hover:text-marron px-3 py-2 rounded-md text-base font-medium">Rdv
+                            et
+                            Contact</a>
+                    </div>
 
                 </div>
             </div>
         </div>
-        </div>
 
-        <!-- Mobile menu, show/hide based on menu state. -->
-        <div class="sm:hidden" id="mobile-menu">
-            <div class="space-y-1 px-2 pb-3 pt-2">
-                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                <a href="#" class="bg-jaune text-white block rounded-md px-3 py-2 text-base font-medium"
-                    aria-current="page">Pour qui ?</a>
-                <a href="#"
-                    class="bg-marron text-white hover:bg-jaune hover:text-white block rounded-md px-3 py-2 text-base font-medium">Pour
-                    quoi ?</a>
-                <a href="#"
-                    class="bg-marron text-white hover:bg-jaune hover:text-white block rounded-md px-3 py-2 text-base font-medium">À
+        <!-- Mobile menu -->
+        <div class="sm:hidden" id="mobile-menu" style="display: none;">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <!-- Mobile navigation links -->
+                <a href="#" class="text-gray-900 hover:bg-jaune block px-3 py-2 rounded-md text-base font-medium">Pour
+                    qui
+                    ?</a>
+                <a href="#" class="text-gray-900 hover:bg-jaune block px-3 py-2 rounded-md text-base font-medium">Pour
+                    quoi
+                    ?</a>
+                <a href="#" class="text-gray-900 hover:bg-jaune block px-3 py-2 rounded-md text-base font-medium">À
                     propos</a>
-                <a href="#"
-                    class="bg-marron text-white hover:bg-jaune hover:text-white block rounded-md px-3 py-2 text-base font-medium">Rdv
+                <a href="#" class="text-gray-900 hover:bg-jaune block px-3 py-2 rounded-md text-base font-medium">Rdv
                     et Contact</a>
             </div>
         </div>
@@ -184,7 +163,7 @@
     <!-- L'Ostéopathie ? ------------------------------------------------------->
 
 
-    <section class="w-full bg-cover bg-center py-32 px-10"
+    <section class="w-full bg-cover bg-center py-24 px-10"
         style="background-image: url(./assets/Cabinet_lea_losteo.JPG);">
 
         <div class="container mx-auto text-center text-white lg:px-32 lg:py-32">
@@ -478,7 +457,6 @@
 
             <h2 class=" text-3xl lg:text-left pb-10 text-center text-gray-900 mb-8">Quand consulter ?</h2>
 
-
             <div class="card-container">
 
 
@@ -642,12 +620,12 @@
     <section class="text-gray-600 body-font">
         <div class="container mx-auto flex md:flex-row flex-col items-center md:px-20 px-5 py-24">
             <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
-                <img class="object-cover object-center rounded" alt="hero" src="./assets/lea-portrait.png">
+                <img class="object-cover object-center rounded" alt="hero" src="./assets/A-propos.png">
             </div>
             <div
                 class="lg:flex-grow md:w-1/2 md:pl-5 flex flex-col md:items-start md:text-left items-center text-center ">
 
-                <h2 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">A propos </h2>
+                <h2 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">A propos</h2>
 
                 <p class="mb-8 leading-relaxed">J’ai reçu une formation initiale de cinq ans à l’école Ostéobio, en
                     région parisienne dont je suis originaire.
@@ -681,19 +659,16 @@
     <!-- Contact ------------------------------------------------------->
 
 
+    <section class="text-gray-900 body-font lg:pl-28 md:pl-10 md:pr-10 bg-[#a68a64]">
 
-    <section class="text-gray-900 body-font md:px-20 px-5 py-24 bg-marron">
+        <h2 class="text-3xl lg:text-left text-center text-gray-900 mt-16">Prendre rendez-vous</h2>
 
-        <h2 class="text-3xl lg:text-left text-center text-gray-900 mb-8">Prendre rendez-vous</h2>
-
-        <div class=" container mx-auto flex md:flex-row flex-col items-center md:px-20 px-5 py-24">
-
-            <div class="lg:w-1/2 lg:items-start flex flex-col flex-wrap -mb-10 items-center text-center">
-
-
-                <div class="flex flex-col mb-10 lg:items-start mx-auto items-center">
+        <div class="container mx-auto flex flex-col md:flex-row items-center px-5 py-24">
+            <div class="w-full lg:w-1/2 mb-10 lg:mb-0">
+                <div class="flex flex-col md:flex-row items-center mb-10 text-center md:text-left">
                     <div
-                        class="w-12 h-12 mx-auto inline-flex items-center justify-center rounded-full bg-jaune text-blanc mb-5">
+                        class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-jaune text-blanc mb-3 md:mb-0 md:mr-6">
+
                         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                             stroke-width="2" class="w-5 h-5" viewBox="0 0 23 23">
                             <path
@@ -702,14 +677,14 @@
                         </svg>
                     </div>
                     <div class="flex-grow">
-                        <h2 class="text-gray-900 text-lg title-font font-medium mb-3">TEL</h2>
-                        <p class="leading-relaxed text-base"> 06 26 38 81 61 </p>
-
+                        <h2 class="text-gray-900 text-lg title-font font-medium mb-2">TEL</h2>
+                        <p class="leading-relaxed text-base">06 26 38 81 61</p>
                     </div>
                 </div>
-                <div class="flex flex-col mb-10 lg:items-start mx-auto items-center">
+
+                <div class="flex flex-col md:flex-row items-center mb-10 text-center md:text-left">
                     <div
-                        class="w-12 h-12 mx-auto inline-flex items-center justify-center rounded-full bg-jaune text-blanc mb-5">
+                        class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-jaune text-blanc mb-3 md:mb-0 md:mr-6">
                         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                             stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
 
@@ -721,12 +696,13 @@
                     <div class="flex-grow">
                         <h2 class="text-gray-900 text-lg title-font font-medium mb-3">MAIL</h2>
                         <p class="leading-relaxed text-base">leablais.osteo@gmail.com</p>
-
                     </div>
                 </div>
-                <div class="flex flex-col mb-10 lg:items-start mx-auto items-center">
+
+
+                <div class="flex flex-col md:flex-row items-center mb-10 text-center md:text-left">
                     <div
-                        class="w-12 h-12 mx-auto inline-flex items-center justify-center rounded-full bg-jaune text-blanc mb-5">
+                        class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-jaune text-blanc mb-3 md:mb-0 md:mr-6">
                         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                             stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
                             <path
@@ -736,50 +712,46 @@
                     </div>
                     <div class="flex-grow">
                         <h2 class="text-gray-900 text-lg title-font font-medium mb-3">ADRESSE</h2>
-                        <p class="leading-relaxed text-base">62 rue de la Libération 53400 Craon,<br> accès
-                            PMR,
-                            parking gratuit</p>
-
+                        <p class="leading-relaxed text-base">62 rue de la Libération 53400 Craon,<br> accès PMR, parking
+                            gratuit</p>
                     </div>
                 </div>
+
             </div>
 
-            <div class="lg:w-1/3 lg: pt-15 md:w-1/2 pt-5 bg-blanc text-center rounded-lg p-8 flex flex-col shadow-lg">
 
-                <h2 class="text-gray-900 text-lg font-medium title-font mt-5 mb-2">Horaires</h2>
-                <p class="text-normal text-gray-500 mb-5"> 9h - 20h15 <br> du lundi au samedi</p>
-
-                <div class="relative mb-4">
-                    <h2 class="text-gray-900 text-lg font-medium title-font mb-2">Tarifs</h2>
-                    <p class="text-normal text-gray-500 mb-10">60€ la consultation</p>
-                </div>
-                <div class="relative mb-4">
-                    <img class=" mx-auto my-auto w-40" src="/assets/doctolib.png" alt="Rendez-vous doctolib">
-                </div>
+            <div
+                class="lg:w-1/3 lg:pt-15 md:w-1/2 pt-5 bg-white text-center rounded-lg p-8 flex flex-col shadow-lg mx-auto">
+                <h2 class="text-gray-900 text-lg font-medium title-font mt-5 mb-1">Horaires</h2>
+                <p class="leading-relaxed text-gray-500 mb-5">9h - 20h15<br>du lundi au samedi</p>
+                <h2 class="text-gray-900 text-lg font-medium title-font mb-1 mt-3">Tarif</h2>
+                <p class="leading-relaxed text-gray-500 mb-10">40€ la consultation</p>
+                <img class=" mx-auto my-auto w-40" src="/assets/doctolib.png" alt="Rendez-vous doctolib">
                 <button
-                    class="text-white bg-marron border-0 py-2 px-4 focus:outline-none hover:bg-jaune rounded text-base mb-5 mx-auto w-50">
-                    Prendre
-                    rdv en ligne</button>
+                    class="text-white bg-marron border-0 py-2 px-4 focus:outline-none hover:bg-jaune rounded text-base mb-5 mx-auto w-50 mt-5">
+                    Prendre rdv en ligne</button>
             </div>
-        </div>
+
         </div>
     </section>
 
 
+
     <!-- Footer ------------------------------------------------------->
 
-    <footer class="bg-beige lg:px-10 xl:px-0">
+    <footer class="bg-beige md:px-10 py-10">
 
+        <div class="container flex md:items-center md:flex-row md:flex-wrap flex-col">
 
-        <div class="container px-5 py-10 mx-auto max-w-7xl flex md:items-center md:flex-row md:flex-wrap flex-col">
-
-            <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
-                <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900 ">
-                    <img class="w-20" src="/assets/logo-lea-losteo-seul.svg" alt="Logo Léa l'Ostéo">
+            <div class="flex-shrink-0 md:mx-0 text-center md:text-left md:mt-8">
+                <a class="flex items-center md:justify-start justify-center text-gray-900 ">
+                    <img class="w-16" src="/assets/logo-lea-losteo-seul.svg" alt="Logo Léa l'Ostéo">
                 </a>
 
-                <p class=" mt-5 mb-1 text-sm text-gray-900">Retrouvez-moi sur les réseaux sociaux !</p>
-                <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+                <p class=" mt-5 mb-1 text-base text-gray-900">Retrouvez-moi sur les réseaux sociaux !</p>
+
+                <span class="inline-flex sm:ml-auto justify-center sm:justify-start mb-9">
+
                     <a class="text-gray-900">
                         <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             class="w-6 h-6" viewBox="0 0 24 24">
@@ -796,21 +768,20 @@
 
                 </span>
             </div>
-            <div class="flex-grow flex flex-wrap md:pl-0 -mb-10 md: mt-10 md:text-right text-center mt-35">
-                <div class="w-full px-4">
+            <div class="flex-grow flex flex-wrap md:pl-0 md:mt-8 md:text-right text-center">
+                <div class="w-full">
                     <nav class="list-none mb-10">
-                        <li>
+                        <li class="mb-3">
                             <a class="text-gray-900 hover:text-gray-800">Mentions légales</a>
                         </li>
-                        <li>
+                        <li class="mb-3">
                             <a class="text-gray-900 hover:text-gray-800">© 2023 Léa L'ostéo </a>
                         </li>
-                        <li>
+                        <li class="mb-0">
                             <a class="text-gray-900 hover:text-gray-800"> Site réalisé par<a
                                     href="https://twitter.com/knyttneve" rel="noopener noreferrer"
                                     class="text-gray-900 ml-1" target="_blank">@Marine Bianchi</a></a>
                         </li>
-
                     </nav>
                 </div>
             </div>
