@@ -15,6 +15,46 @@ function toggleMenu() {
   }
 }
 
+let lastScrollTop = 0;
+const navbar = document.getElementById('navbar');
+let isScrolling;
+
+function adjustNavbarOnScroll() {
+  const currentScroll = window.scrollY;
+
+  if (currentScroll > lastScrollTop && currentScroll > 60) {
+    // Scrolling Down
+    navbar.style.transform = 'translateY(-100%)';
+  } else {
+    // Scrolling Up or Not Scrolling
+    navbar.style.transform = 'translateY(0)';
+  }
+
+  // Set a timeout to hide the navbar after some time of no scrolling
+  window.clearTimeout(isScrolling);
+  isScrolling = setTimeout(() => {
+    if (currentScroll > 60) {
+      navbar.style.transform = 'translateY(-100%)';
+    }
+  }, 1500); // Adjust the time (1500ms) to your liking
+
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+}
+
+// Event listeners
+if (window.innerWidth >= 768) {
+  window.addEventListener('scroll', adjustNavbarOnScroll);
+}
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth < 768) {
+    window.removeEventListener('scroll', adjustNavbarOnScroll);
+    navbar.style.transform = 'translateY(0)'; // Always show navbar on mobile
+  } else {
+    window.addEventListener('scroll', adjustNavbarOnScroll);
+  }
+});
+
 
 document.addEventListener('DOMContentLoaded', function () {
 
