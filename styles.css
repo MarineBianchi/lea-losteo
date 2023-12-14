@@ -38,60 +38,11 @@ body {
 
 
 
-/* Grid --------------------------- */
-
-.gridContainer {
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, 1fr);
-    display: grid;
-    position: relative;
-
-}
-
-.photoOseteopahtie {
-    position: absolute;
-    grid-column: 2 / span 5;
-    /* Démarrage à la première colonne, extension sur 5 colonnes */
-    grid-row: 2/ span 5;
-    /* Démarrage à la deuxième ligne, extension sur 1 ligne */
-}
-
-.fondBeige {
-    grid-column: 6 / span 12;
-    grid-row: 3 / span 7;
-    background-color: #F7F1E4;
-    /* padding: 100px; */
-    z-index: -1;
-
-}
-
-.texte {
-    padding: 20px;
-    grid-column: 7 / span 8;
-    grid-row: 4 / span 7;
-    z-index: 1;
-
-}
-
-.fondmarron {
-    grid-column: 1 / span 11;
-    grid-row: 9 / span 12;
-    background-color: #E3BBA0;
-    padding: 70px;
-
-}
-
-.paragrapheHoraires {
-    grid-column: 7 / span 11;
-    grid-row: 10 / span 11;
-}
-
 /* Flip cards pour qui ? ------------------- */
 
 .flip-card {
     width: 260px;
     height: 400px;
-    border: 1px solid #f1f1f1;
     align-items: center;
     overflow: hidden;
     perspective: 4000px;
@@ -239,4 +190,48 @@ body {
 .card.active .card-content {
     display: block;
     margin-top: 10px;
+}
+
+
+/* --------------------------------------------------- parallax  */
+
+.parallax {
+    /* Ajustez le chemin d'accès à votre image */
+    background-image: url('./assets/losteopathie.png');
+
+    /* Créez l'effet de parallaxe */
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Ajoutez du contenu supplémentaire pour faire défiler */
+.content {
+    height: 1000px;
+}
+
+
+
+/* Style pour l'effet d'opacité initial */
+.SectionOpacite {
+    opacity: 0;
+    transition: opacity 1.5s ease-out;
+}
+
+/* Style lorsque la section devient visible */
+.SectionOpacite.visible {
+    opacity: 1;
+}
+
+/* Style pour l'effet d'opacité initial */
+.SectionOpacite1 {
+    opacity: 0;
+    transition: opacity 1.5s ease-out;
+}
+
+/* Style lorsque la section devient visible */
+.SectionOpacite1.visible {
+    opacity: 1;
 }

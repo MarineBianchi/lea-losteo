@@ -15,46 +15,55 @@ function toggleMenu() {
   }
 }
 
-let lastScrollTop = 0;
-const navbar = document.getElementById('navbar');
-let isScrolling;
 
-function adjustNavbarOnScroll() {
+
+// -------------------------------  NavBar disparait
+let lastScrollTop = 0;
+let isScrolling;
+const navbar = document.getElementById('navbar');
+
+function handleNavbarScroll() {
   const currentScroll = window.scrollY;
 
-  if (currentScroll > lastScrollTop && currentScroll > 60) {
-    // Scrolling Down
-    navbar.style.transform = 'translateY(-100%)';
+  if (currentScroll > 10) {
+    navbar.classList.remove('bg-beige');
+    navbar.classList.add('bg-white', 'shadow');
   } else {
-    // Scrolling Up or Not Scrolling
-    navbar.style.transform = 'translateY(0)';
+    navbar.classList.remove('bg-white', 'shadow');
+    navbar.classList.add('bg-beige');
   }
 
-  // Set a timeout to hide the navbar after some time of no scrolling
+  // Clear timeout throughout the scroll
   window.clearTimeout(isScrolling);
+
+  // Show navbar when scrolling
+  navbar.style.transform = 'translateY(0)';
+
+  // Hide navbar after a brief delay of no scrolling
   isScrolling = setTimeout(() => {
-    if (currentScroll > 60) {
+    if (window.scrollY > 60) {
       navbar.style.transform = 'translateY(-100%)';
     }
-  }, 1500); // Adjust the time (1500ms) to your liking
+  }, 1000); // Adjust the time (1500ms) to your liking
 
-  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
 }
 
 // Event listeners
-if (window.innerWidth >= 768) {
-  window.addEventListener('scroll', adjustNavbarOnScroll);
-}
+window.addEventListener('scroll', handleNavbarScroll);
 
 window.addEventListener('resize', () => {
   if (window.innerWidth < 768) {
-    window.removeEventListener('scroll', adjustNavbarOnScroll);
+    window.removeEventListener('scroll', handleNavbarScroll);
     navbar.style.transform = 'translateY(0)'; // Always show navbar on mobile
+    navbar.classList.remove('bg-white', 'shadow');
+    navbar.classList.add('bg-beige');
   } else {
-    window.addEventListener('scroll', adjustNavbarOnScroll);
+    window.addEventListener('scroll', handleNavbarScroll);
   }
 });
 
+// cards ----------------------------------
 
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -99,3 +108,33 @@ document.addEventListener('DOMContentLoaded', function () {
 
   });
   
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.3 }); // Ajustez le seuil selon vos besoins
+
+    // Sélectionnez la section à observer
+    const section = document.querySelector('.SectionOpacite');
+    observer.observe(section);
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+          }
+      });
+  }, { threshold: 0.1 }); // Ajustez le seuil selon vos besoins
+
+  // Sélectionnez la section à observer
+  const section = document.querySelector('.SectionOpacite1');
+  observer.observe(section);
+});
+
