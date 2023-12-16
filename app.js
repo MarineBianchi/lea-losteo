@@ -1,4 +1,5 @@
 
+
 function toggleMenu() {
   var menu = document.getElementById('mobile-menu');
   var openIcon = document.getElementById('menu-open-icon');
@@ -16,6 +17,12 @@ function toggleMenu() {
 }
 
 
+// -------------------------------  Fermer cookie
+
+document.getElementById('accept-cookies').addEventListener('click', function() {
+  document.getElementById('cookie-banner').style.display = 'none';
+});
+
 
 // -------------------------------  NavBar disparait
 let lastScrollTop = 0;
@@ -27,9 +34,9 @@ function handleNavbarScroll() {
 
   if (currentScroll > 10) {
     navbar.classList.remove('bg-beige');
-    navbar.classList.add('bg-white', 'shadow');
+    navbar.classList.add('bg-white');
   } else {
-    navbar.classList.remove('bg-white', 'shadow');
+    navbar.classList.remove('bg-white');
     navbar.classList.add('bg-beige');
   }
 
@@ -44,7 +51,7 @@ function handleNavbarScroll() {
     if (window.scrollY > 60) {
       navbar.style.transform = 'translateY(-100%)';
     }
-  }, 1000); // Adjust the time (1500ms) to your liking
+  }, 1200); // Adjust the time (1500ms) to your liking
 
   lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
 }
@@ -138,3 +145,45 @@ document.addEventListener('DOMContentLoaded', () => {
   observer.observe(section);
 });
 
+
+
+// equilibrage ancrage
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    let target = document.querySelector(this.getAttribute('href'));
+    let navbarHeight = document.getElementById('navbar').offsetHeight;
+
+    window.scrollTo({
+      top: target.offsetTop - navbarHeight,
+      behavior: 'smooth'
+    });
+  });
+});
+
+
+// Faire disparaitre les flêches de scrool quand l'ecran diminue
+
+document.addEventListener('DOMContentLoaded', function () {
+
+  const picturesContainer = document.querySelector('.picturesContainer');
+  const scrollLeftButton = document.getElementById('scroll-left');
+  const scrollRightButton = document.getElementById('scroll-right');
+
+  function checkScrollArrows() {
+    const containerWidth = picturesContainer.offsetWidth;
+    const contentWidth = picturesContainer.scrollWidth;
+
+    if (contentWidth <= containerWidth) {
+      scrollLeftButton.style.display = 'none';
+      scrollRightButton.style.display = 'none';
+    } else {
+      scrollLeftButton.style.display = 'block';
+      scrollRightButton.style.display = 'block';
+    }
+  }
+  checkScrollArrows();
+  window.addEventListener('resize', checkScrollArrows);
+});
