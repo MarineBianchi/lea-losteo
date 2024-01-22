@@ -36,11 +36,11 @@
 
     <div id="cookie-banner" class="fixed bottom-0 left-0 w-full bg-jaune text-white py-3 px-5 z-50">
         <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
-            <p class="text-sm md:text-base">Nous collectons seulement les cookies nécessaires pour améliorer votre
+            <p class="text-sm md:text-base">Ce site collecte seulement les cookies nécessaires pour améliorer votre
                 expérience</p>
             <div class="flex items-center mt-3 md:mt-0">
-                <a href="/politique-de-confidentialite" class="text-black underline text-xs md:text-sm mr-4">Politique
-                    de confidentialité</a>
+                <a href="/mentions_legales.html" class="text-black underline text-xs md:text-sm mr-4">Mentions
+                    légales</a>
                 <button id="accept-cookies"
                     class="bg-beige hover:bg-marron hover:text-blanc text-black text-xs md:text-sm py-2 px-4 rounded">Accepter</button>
             </div>
@@ -137,7 +137,8 @@
             </div>
             <div
                 class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-                <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Bienvenue au cabinet
+                <h1 class="title-font lg:text-6xl sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Bienvenue au
+                    cabinet
                     <br class="hidden lg:inline-block">Léa l’Ostéo de Craon
                 </h1>
 
@@ -454,11 +455,11 @@
 
     <section id="pour-quoi">
 
-        <div class="scroll-container body-font md:px-20 px-5 py-24 bg-beige">
+        <div class="scroll-container body-font md:px-20 px-5 pt-24 bg-beige">
 
             <h1 class=" text-3xl lg:text-left pb-10 text-center text-gray-900 mb-8">Quand consulter ?</h1>
 
-            <div class="card-container">
+            <div class="card-container justify-center xl:space-x-14">
 
                 <div class="card" id="card4">
 
@@ -529,6 +530,18 @@
                         <p>lombalgie, sciatique, cruralgie</p>
                     </div>
                 </div>
+
+
+            </div>
+
+            <div class="arrow-buttons">
+                <button id="scroll-left2">&lt;</button>
+                <button id="scroll-right2">&gt;</button>
+            </div>
+        </div>
+        <div class="scroll-container body-font md:px-20 px-5 bg-beige">
+
+            <div class="card-container3 justify-center xl:space-x-14">
 
                 <div class="card" id="card6">
 
@@ -603,30 +616,39 @@
             </div>
 
             <div class="arrow-buttons">
-                <button id="scroll-left2">&lt;</button>
-                <button id="scroll-right2">&gt;</button>
+                <button id="scroll-left3">&lt;</button>
+                <button id="scroll-right3">&gt;</button>
             </div>
         </div>
-
-
     </section>
 
 
 
     <!-- A Propos ------------------------------------------------------->
 
-    <section class="text-gray-600 body-font SectionOpacite" id="a-propos">
-        <div class="container mx-auto flex md:flex-row flex-col items-center px-10 py-24 lg:px-24 lg:py-20">
-            <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
-                <img class="object-cover object-center rounded md:pr-10" alt="Ostéopathe a Craon doctolib"
-                    src="./assets/A-propos.png">
+    <section class="text-gray-600 body-font SectionOpacite flex" id="a-propos">
+        <div
+            class="container mx-auto flex md:flex-row flex-col items-center md:px-10 py-24 lg:px-24 lg:py-20 md:space-x-10">
+
+            <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0 relative">
+                <img src="./assets/A-propos2.png" class="carousel-image hidden" alt="Ostéopathe en Mayenne doctolib">
+                <img src="./assets/A-propos.png" class="carousel-image hidden" alt="Ostéopathe a Craon doctolib">
+                <img src="./assets/A-propos3.png" class="carousel-image hidden" alt="Ostéopathe rendez-vous rapide">
+
+                <div class="carousel-indicators absolute bottom-0 flex pb-5">
+                    <span class="indicator" onclick="setCurrentSlide(0)"></span>
+                    <span class="indicator" onclick="setCurrentSlide(1)"></span>
+                    <span class="indicator" onclick="setCurrentSlide(2)"></span>
+                </div>
+
             </div>
-            <div
-                class="lg:flex-grow md:w-1/2 md:pl-5 flex flex-col md:items-start md:text-left items-center text-center">
+
+            <div class="lg:flex-grow md:w-1/2 flex flex-col md:items-start md:text-left items-center text-center">
 
                 <h1 class="title-font sm:text-4xl text-3xl mb-14 font-medium text-gray-900">A propos</h1>
 
-                <p class="mb-8 leading-relaxed">J’ai reçu une formation initiale de cinq ans à l’école Ostéobio, en
+                <p class=" mobileApropos mb-8 leading-relaxed">J’ai reçu une formation initiale de cinq ans à l’école
+                    Ostéobio, en
                     région parisienne dont je suis originaire.
                     Après trois années en tant qu’ostéopathe collaborateur en Mayenne, j’ai décidé d’ouvrir mon
                     propre
@@ -737,7 +759,7 @@
 
     <footer class="bg-white md:px-10 py-10">
 
-        <div class="container flex md:items-center md:flex-row md:flex-wrap flex-col">
+        <div class="container flex md:items-center md:flex-row md:flex-wrap flex-col lg:pl-24">
 
             <div class="flex-shrink-0 md:mx-0 text-center md:text-left md:mt-8">
                 <a class="flex items-center md:justify-start justify-center text-gray-900 ">
@@ -769,10 +791,11 @@
                 <div class="w-full">
                     <nav class="list-none mb-10">
                         <li class="mb-3">
-                            <a class="text-gray-900 hover:text-gray-800">Mentions légales</a>
+                            <a href="/mentions_legales.html" class="text-marron">Mentions
+                                légales</a>
                         </li>
                         <li class="mb-3">
-                            <a class="text-gray-900 hover:text-gray-800">© 2023 Léa L'ostéo </a>
+                            <a class="text-gray-900 hover:text-gray-800">© 2023 Léa L'Ostéo </a>
                         </li>
                         <li class="mb-0">
                             <a class="text-gray-900 hover:text-gray-800"> Site réalisé par <a

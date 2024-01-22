@@ -112,6 +112,21 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
+   const cardContainer2 = document.querySelector('.card-container3');
+  
+   const scrollLeftButtonCard2 = document.getElementById('scroll-left3');
+   const scrollRightButtonCard2 = document.getElementById('scroll-right3');
+ 
+   scrollLeftButtonCard2.addEventListener('click', function () {
+    cardContainer2.scrollBy({ left: -250, behavior: 'smooth' });
+   });
+ 
+   scrollRightButtonCard2.addEventListener('click', function () {
+    cardContainer2.scrollBy({ left: 250, behavior: 'smooth' });
+   });
+
+
+
 
   });
   
@@ -169,21 +184,70 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 document.addEventListener('DOMContentLoaded', function () {
 
   const picturesContainer = document.querySelector('.picturesContainer');
+  const cardsContainer = document.querySelector('.card-container'); 
+  const cardsContainer3 = document.querySelector('.card-container3'); 
+
   const scrollLeftButton = document.getElementById('scroll-left');
   const scrollRightButton = document.getElementById('scroll-right');
 
-  function checkScrollArrows() {
-    const containerWidth = picturesContainer.offsetWidth;
-    const contentWidth = picturesContainer.scrollWidth;
+  const scrollLeftButton2 = document.getElementById('scroll-left2');
+  const scrollRightButton2 = document.getElementById('scroll-right2');
+
+  const scrollLeftButton3 = document.getElementById('scroll-left3');
+  const scrollRightButton3 = document.getElementById('scroll-right3');
+
+  function checkScrollArrows(container, leftButton, rightButton) {
+    const containerWidth = container.offsetWidth;
+    const contentWidth = container.scrollWidth;
 
     if (contentWidth <= containerWidth) {
-      scrollLeftButton.style.display = 'none';
-      scrollRightButton.style.display = 'none';
+      leftButton.style.display = 'none';
+      rightButton.style.display = 'none';
     } else {
-      scrollLeftButton.style.display = 'block';
-      scrollRightButton.style.display = 'block';
+      leftButton.style.display = 'block';
+      rightButton.style.display = 'block';
     }
   }
-  checkScrollArrows();
-  window.addEventListener('resize', checkScrollArrows);
+
+  // Vérifie les flèches pour chaque ensemble de conteneurs et de boutons
+  function checkAllScrollArrows() {
+    checkScrollArrows(picturesContainer, scrollLeftButton, scrollRightButton);
+    checkScrollArrows(cardsContainer, scrollLeftButton2, scrollRightButton2);
+    checkScrollArrows(cardsContainer3, scrollLeftButton3, scrollRightButton3); 
+  }
+
+  checkAllScrollArrows();
+  window.addEventListener('resize', checkAllScrollArrows);
 });
+
+
+// ------------------- CAROUSSEL ---------------------
+
+let currentSlide = 0;
+const slides = document.querySelectorAll('.carousel-image');
+const indicators = document.querySelectorAll('.indicator');
+
+function showSlide(index) {
+    slides.forEach(slide => slide.style.display = 'none');
+    indicators.forEach(dot => dot.classList.remove('active'));
+
+    slides[index].style.display = 'block';
+    indicators[index].classList.add('active');
+}
+
+function setCurrentSlide(index) {
+    currentSlide = index;
+    showSlide(currentSlide);
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}
+
+// Afficher la première diapositive
+showSlide(currentSlide);
+
+// intervalle pour le défilement automatique
+setInterval(nextSlide, 4000); 
+
