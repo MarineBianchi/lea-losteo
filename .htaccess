@@ -1,3 +1,6 @@
 RewriteEngine On
 
 ErrorDocument 404 /404.html
+
+RewriteRule ^mentions-legales$ /mentions_legales.html [L]
+RewriteRule ^404$ /404.html [L]
