@@ -2,27 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://lealosteo.com/</loc>
-        <lastmod>2023-04-01</lastmod>
+        <lastmod>2024-01-23</lastmod>
+          <changefreq>yearly</changefreq>
         <priority>1.00</priority>
     </url>
     <url>
         <loc>https://lealosteo.com/#pour-qui</loc>
-        <lastmod>2023-04-01</lastmod>
+        <lastmod>2024-01-23</lastmod>
+                <changefreq>yearly</changefreq>
         <priority>0.80</priority>
     </url>
     <url>
         <loc>https://lealosteo.com/#pour-quoi</loc>
-        <lastmod>2023-04-01</lastmod>
+        <lastmod>2024-01-23</lastmod>
+             <changefreq>yearly</changefreq>
         <priority>0.80</priority>
     </url>
     <url>
         <loc>https://lealosteo.com/#a-propos</loc>
-        <lastmod>2023-04-01</lastmod>
+        <lastmod>2024-01-23</lastmod>
+             <changefreq>yearly</changefreq>
         <priority>0.80</priority>
     </url>
     <url>
         <loc>https://lealosteo.com/#contact</loc>
-        <lastmod>2023-04-01</lastmod>
+        <lastmod>2024-01-23</lastmod>
+             <changefreq>yearly</changefreq>
         <priority>0.80</priority>
+    </url>
+       <url>
+        <loc>https:/lealosteo.com//mentions_legales.html</loc>
+        <lastmod>2024-01-23</lastmod>
+             <changefreq>yearly</changefreq>
+        <priority>0.50</priority>
     </url>
 </urlset>
