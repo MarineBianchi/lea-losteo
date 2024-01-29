@@ -40,20 +40,18 @@ function handleNavbarScroll() {
     navbar.classList.add('bg-beige');
   }
 
-  // Clear timeout throughout the scroll
+
   window.clearTimeout(isScrolling);
 
-  // Show navbar when scrolling
+
   navbar.style.transform = 'translateY(0)';
 
-  // Hide navbar after a brief delay of no scrolling
   isScrolling = setTimeout(() => {
     if (window.scrollY > 60) {
       navbar.style.transform = 'translateY(-100%)';
     }
-  }, 1200); // Adjust the time (1500ms) to your liking
-
-  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
+  }, 1200); 
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; 
 }
 
 // Event listeners
@@ -62,7 +60,7 @@ window.addEventListener('scroll', handleNavbarScroll);
 window.addEventListener('resize', () => {
   if (window.innerWidth < 768) {
     window.removeEventListener('scroll', handleNavbarScroll);
-    navbar.style.transform = 'translateY(0)'; // Always show navbar on mobile
+    navbar.style.transform = 'translateY(0)'; 
     navbar.classList.remove('bg-white', 'shadow');
     navbar.classList.add('bg-beige');
   } else {
@@ -138,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 entry.target.classList.add('visible');
             }
         });
-    }, { threshold: 0.3 }); // Ajustez le seuil selon vos besoins
+    }, { threshold: 0.3 }); 
 
     // Sélectionnez la section à observer
     const section = document.querySelector('.SectionOpacite');
@@ -153,16 +151,15 @@ document.addEventListener('DOMContentLoaded', () => {
               entry.target.classList.add('visible');
           }
       });
-  }, { threshold: 0.1 }); // Ajustez le seuil selon vos besoins
+  }, { threshold: 0.1 }); 
 
-  // Sélectionnez la section à observer
   const section = document.querySelector('.SectionOpacite1');
   observer.observe(section);
 });
 
 
 
-// equilibrage ancrage
+// equilibrage ancrage ------------------------------
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
@@ -244,10 +241,6 @@ function nextSlide() {
     currentSlide = (currentSlide + 1) % slides.length;
     showSlide(currentSlide);
 }
-
-// Afficher la première diapositive
 showSlide(currentSlide);
-
-// intervalle pour le défilement automatique
 setInterval(nextSlide, 4000); 
 

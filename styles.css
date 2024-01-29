@@ -198,21 +198,17 @@ body {
 .parallax::before {
     content: '';
     position: absolute;
-
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.2);
-    /* Fond noir semi-transparent */
     z-index: 1;
-    /* S'assurer qu'il est sous le contenu mais au-dessus de l'image de fond */
 }
 
 .container {
     position: relative;
     z-index: 2;
-    /* S'assurer que le contenu est au-dessus du fond semi-transparent */
 }
 
 
@@ -309,8 +305,6 @@ body {
 @media (max-width: 768px) {
     .mobileApropos {
         padding-left: 25px;
-        /* Ajoute du padding à gauche */
         padding-right: 25px;
-        /* Ajoute du padding à droite */
     }
 }
