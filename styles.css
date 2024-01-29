@@ -1,21 +1,13 @@
 @tailwind base;
-/* Preflight will be injected here */
-
 @tailwind components;
-
 @tailwind utilities;
-
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,700&display=swap');
 
-
 body {
     overflow-x: hidden;
 }
-
-
-/* Flip cards pour qui ? ------------------- */
 
 .flip-card {
     width: 260px;
@@ -23,7 +15,6 @@ body {
     align-items: center;
     overflow: hidden;
     perspective: 4000px;
-
 }
 
 .flip-card-inner {
@@ -55,12 +46,7 @@ body {
 
 .picturesContainer::-webkit-scrollbar {
     display: none;
-    /* Chrome, Safari, Opera */
 }
-
-
-/* ------- Quand consulter */
-
 
 .arrow-buttons {
     margin-top: 50px;
@@ -75,7 +61,6 @@ body {
     cursor: pointer;
     padding: 10px;
     font-size: 40px;
-
 }
 
 #scroll-left2,
@@ -83,7 +68,6 @@ body {
     cursor: pointer;
     padding: 10px;
     font-size: 40px;
-
 }
 
 #scroll-left3,
@@ -91,7 +75,6 @@ body {
     cursor: pointer;
     padding: 10px;
     font-size: 40px;
-
 }
 
 .card-container {
@@ -108,7 +91,6 @@ body {
 
 .card-container::-webkit-scrollbar {
     display: none;
-    /* Chrome, Safari, Opera */
 }
 
 .card {
@@ -138,12 +120,10 @@ body {
     justify-content: center;
 }
 
-
 .header-content {
     flex-grow: 1;
     display: flex;
     align-items: center;
-
 }
 
 .card-header img {
@@ -153,7 +133,6 @@ body {
 
 .card-content {
     flex-grow: 1;
-    /* margin-left: 10px; */
     display: none;
 }
 
@@ -181,10 +160,6 @@ body {
     margin-top: 10px;
 }
 
-
-
-/* --------------------------------------------------- parallax  */
-
 .parallax {
     position: relative;
     background-image: url('./assets/Cabinet_lea_losteo.jpg');
@@ -211,7 +186,6 @@ body {
     z-index: 2;
 }
 
-
 .content {
     height: 1000px;
 }
@@ -233,9 +207,6 @@ body {
 .SectionOpacite1.visible {
     opacity: 1;
 }
-
-
-/* ---------- Effet machine a ecrire */
 
 @keyframes typing {
     from {
@@ -264,19 +235,12 @@ body {
     overflow: hidden;
     white-space: nowrap;
     animation: typing 3.5s steps(30, end) forwards, blink-caret .75s step-end infinite;
-
 }
-
-
-/* ------------- Caroussel CSS */
-
-
 
 .carousel-indicators {
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    /* padding-bottom: 20px; */
 }
 
 @media (max-width: 768px) {
@@ -292,15 +256,11 @@ body {
     border-radius: 50%;
     margin: 0 5px;
     cursor: pointer;
-
 }
 
 .indicator.active {
     background-color: #E3BBA0;
 }
-
-
-
 
 @media (max-width: 768px) {
     .mobileApropos {
