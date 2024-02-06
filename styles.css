@@ -195,6 +195,12 @@ body {
     background-size: cover;
 }
 
+@media (max-width: 768px) {
+    .parallax {
+        background-attachment: scroll; 
+    }
+}
+
 .parallax::before {
     content: '';
     position: absolute;
